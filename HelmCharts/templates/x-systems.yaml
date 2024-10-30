@@ -1,0 +1,30 @@
+{{- $root := . -}}
+{{- range $group := .Values.repoGroups }}
+{{- if index $group.enabled }}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: {{ $group.name }}
+  namespace: fia
+spec:
+  description: {{ $group.name }} - {{ $group.title }}
+  destinations:
+  - name: in-cluster
+    namespace: {{ $group.name }}
+    server: https://kubernetes.default.svc
+  roles:
+  - description: {{ $group.name }}
+    groups:
+    - DEVOPS-{{ upper $group.name }}
+    name: {{ $group.name }}
+    policies:
+    - p, proj:{{ $group.name }}:{{ $group.name }}, applications, get, {{ $group.name }}/*, allow
+    - p, proj:{{ $group.name }}:{{ $group.name }}, applications, sync, {{ $group.name }}/*, allow
+  sourceRepos:
+    {{- range $app := $group.apps }}
+    - {{ $root.Values.repoPrefix }}{{ $app }}
+    {{- end }}
+
+{{- end }}
+{{- end }}

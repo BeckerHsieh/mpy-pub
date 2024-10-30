@@ -1,0 +1,135 @@
+repoPrefix: https://chte@dev.azure.com/chte/fia/_git/
+repoGroups:
+  - name: b-systems
+    apps:
+      - bam
+      - ban
+      - bci
+      - bcm
+      - bdd
+      - bem
+      - bfr
+      - bgm
+      - bia
+      - bim
+      - bli
+      - blm
+      - blo
+      - blq
+      - bms
+      - brc
+      - bri
+      - brm
+    enabled: true
+    title: 營業稅
+  - name: i-systems
+    apps:
+      - crs
+      - ctr
+      - iaf
+      - iba
+      - ibb
+      - ibc
+      - ibe
+      - ibk
+      - ibr
+      - icm
+      - ida
+      - idu
+      - ifx
+      - igi
+      - ihg
+      - iic
+      - iim
+      - ilc
+      - imc
+      - ina
+      - ipc
+      - iqm
+      - iwi
+    enabled: true
+    title: 綜合所得稅
+  - name: j-systems
+    apps:
+      - egx
+      - eip
+      - eix
+      - etw
+      - jem
+      - jfr
+      - jhq
+      - jkm
+      - jmc
+      - jmg
+      - jmq
+      - jut
+      - jvp
+      - qiz
+      - xbi
+    enabled: true
+    title: 共用服務
+  - name: p-systems
+    apps:
+      - pac
+      - pad
+      - pbs
+      - pea
+      - pgm
+      - plm
+      - poa
+      - pob
+      - pqu
+      - pra
+      - prc
+      - prr
+      - pti
+      - pua
+    enabled: true
+    title: 營業稅
+  - name: t-systems
+    apps:
+      - crm
+      - dav
+      - fpv
+      - gav
+      - kpv
+      - orm
+      - rim
+    enabled: true
+    title: 其他國稅
+  - name: w-systems
+    apps:
+      - nig
+      - tac
+      - tmm
+      - waa
+      - wbi
+      - wbs
+      - wbx
+      - wcs
+      - wem
+      - wii
+      - wmm
+      - wrr
+      - wsm
+      - wss
+      - wtg
+      - wuu
+      - wxm
+      - wxr
+      - wxx
+    enabled: true
+    title: 徵課
+  - name: y-systems
+    apps:
+      - xfs
+      - ybd
+      - ycm
+      - yct
+      - ydd
+      - yim
+      - ymm
+      - ypm
+      - yst
+    enabled: true
+    title: 資源管理
